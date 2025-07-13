@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Waitlist Section - Matched to SkillStack -->
+<section id="waitlist" class="min-h-screen w-full px-6 py-24 md:py-32 bg-gradient-to-tr from-[#4315f0] to-[#6242f6] text-white flex items-center justify-center">
+  <div class="w-full max-w-3xl text-center">
+    <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Get Early Access to PathFlow</h2>
+    <p class="text-lg md:text-xl text-white/80 mb-10">
+      Join our waitlist and be the first to try the AI tool that helps you discover your best career path.
+    </p>
+
+    <!-- Waitlist Form -->
+    <form 
+      id="waitlist-form"
+      action="https://formsubmit.co/dhanegavesamir0@gmail.com"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="handleSubmit()"
+      class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto"
+    >
+      <input 
+        type="email" 
+        name="email" 
+        required 
+        placeholder="Enter Your email" 
+        class="w-full sm:flex-1 px-6 py-3 rounded-xl bg-white text-black placeholder-gray-500 border-none focus:outline-none focus:ring-4 focus:ring-yellow-400 transition"
+      />
+      <button 
+        type="submit" 
+        class="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-8 py-3 rounded-xl transition"
+      >
+        🚀 Join the Waitlist
+      </button>
+
+      <!-- Hidden FormSubmit fields -->
+      <input type="hidden" name="_subject" value="New Waitlist Signup!" />
+      <input type="hidden" name="_template" value="box" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://yourdomain.com/#waitlist" />
+    </form>
+
+    <!-- Iframe to avoid redirect -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <!-- Success Message -->
+    <p id="waitlist-message" class="text-green-400 mt-6 hidden">✅ You're on the list!</p>
+  </div>
+</section>
+
+<!-- JS -->
+<script>
+  function handleSubmit() {
+    setTimeout(() => {
+      document.getElementById("waitlist-message").classList.remove("hidden");
+      document.getElementById("waitlist-form").reset();
+    }, 1000);
+  }
+</script>
+
+</body>
+</html>
